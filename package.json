@@ -1,0 +1,20 @@
+{
+  "name": "zuul-ngrok",
+  "version": "0.0.1",
+  "description": "An ngrok tunnel implementation for Zuul",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rase-/zuul-ngrok"
+  },
+  "keywords": [
+    "zuul",
+    "testing",
+    "browser",
+    "ngrok"
+  ],
+  "dependencies": {
+    "ngrok": "0.1.98"
+  },
+  "author": "Tony Kovanen <tonykovanen@hotmail.com>",
+  "license": "MIT"
+}
