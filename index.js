@@ -17,6 +17,7 @@ Tunnel.prototype.connect = function(port, cb) {
   ngrok.connect(extend({ port: port }, self.tunnel_settings), function(err, url) {
     if (err) {
       cb(err);
+      return;
     }
 
     cb(null, url.replace('tcp://', 'http://') + '/__zuul');
