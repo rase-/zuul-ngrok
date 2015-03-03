@@ -9,6 +9,7 @@ Here is an example:
 
 ```
 tunnel:
+  type: ngrok
   authtoken: JnawIksKFkXQzrxSjIjQ
   subdomain: doge
 ```
@@ -17,6 +18,7 @@ and another one:
 
 ```
 tunnel:
+  type: ngrok
   authtoken: JnawIksKFkXQzrxSjIjQ
   proto: tcp
 ```
