@@ -16,6 +16,7 @@ Tunnel.prototype.connect = function(port, cb) {
 
   ngrok.connect(extend({ port: port }, self.tunnel_settings), function(err, url) {
     if (err) {
+      err.stack = '';
       cb(err);
       return;
     }
