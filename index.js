@@ -21,12 +21,15 @@ Tunnel.prototype.connect = function(port, cb) {
       return;
     }
 
+    self.ngrok_url = url;
     cb(null, url.replace('tcp://', 'http://') + '/__zuul');
   });
 };
 
 Tunnel.prototype.close = function() {
-  ngrok.disconnect();
+  var self = this;
+
+  ngrok.disconnect(self.ngrok_url);
 };
 
 module.exports = Tunnel;
