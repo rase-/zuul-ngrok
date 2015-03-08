@@ -1,6 +1,8 @@
 var ngrok = require('ngrok');
 var extend = require('extend');
 
+var AUTH_TOKEN = process.env.NGROK_AUTH_TOKEN;
+
 function Tunnel(config) {
   if (!this instanceof Tunnel) {
     return new Tunnel(config);
@@ -9,6 +11,9 @@ function Tunnel(config) {
   var self = this;
 
   self.tunnel_settings = config.tunnel;
+  if (AUTH_TOKEN) {
+    self.tunnel_settings = AUTH_TOKEN;
+  }
 }
 
 Tunnel.prototype.connect = function(port, cb) {
