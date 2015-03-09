@@ -24,3 +24,9 @@ tunnel:
 ```
 
 In fact tcp-mode is a special case. If `proto` is specified, the `tcp://` prefix is replaced with `http://` for the Zuul tests to run.
+
+The `authtoken` value is required to set `proto`, `subdomain` and `httpauth` options. It can also be specified in an environmental variable `NGROK_AUTH_TOKEN`:
+
+```
+NGROK_AUTH_TOKEN=tokentokentoken zuul -- test
+```
