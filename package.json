@@ -1,6 +1,6 @@
 {
   "name": "zuul-ngrok",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "description": "An ngrok tunnel implementation for Zuul",
   "repository": {
     "type": "git",
