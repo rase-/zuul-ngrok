@@ -12,7 +12,7 @@ function Tunnel(config) {
 
   self.tunnel_settings = config.tunnel;
   if (AUTH_TOKEN) {
-    self.tunnel_settings = AUTH_TOKEN;
+    self.tunnel_settings.authtoken = AUTH_TOKEN;
   }
 }
 
