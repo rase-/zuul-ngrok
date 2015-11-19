@@ -13,7 +13,7 @@
     "ngrok"
   ],
   "dependencies": {
-    "ngrok": "0.2.1",
+    "ngrok": "0.2.2",
     "extend": "2.0.0"
   },
   "author": "Tony Kovanen <tonykovanen@hotmail.com>",
