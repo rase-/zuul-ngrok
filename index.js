@@ -1,5 +1,5 @@
 var ngrok = require('ngrok');
-var extend = require('extend');
+var xtend = require('xtend');
 
 var AUTH_TOKEN = process.env.NGROK_AUTH_TOKEN;
 
@@ -19,7 +19,7 @@ function Tunnel(config) {
 Tunnel.prototype.connect = function(port, cb) {
   var self = this;
 
-  ngrok.connect(extend({ port: port }, self.tunnel_settings), function(err, url) {
+  ngrok.connect(xtend({ port: port }, self.tunnel_settings), function(err, url) {
     if (err) {
       err.stack = '';
       cb(err);
